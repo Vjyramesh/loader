@@ -338,15 +338,102 @@ body {
     position: relative;
     border: 7px solid red;
     border-radius: 10%;
-    animation: loader12 0.7s infinite forwards linear;
+    animation: loader12 1s infinite forwards linear;
 }
 
+.loader-13 {
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
 
+.loader-13>div {
+    position: absolute;
+    width: 6px;
+    height: 75%;
+    top: 12.5%;
+    left: 0;
+    border-radius: 5px;
+    background: red;
+    animation: topBottom 0.6s infinite forwards linear;
+}
+
+.loader-13>div:nth-of-type(2) {
+    animation: bottomTop 0.6s infinite forwards linear;
+}
+
+@keyframes bottomTop {
+    0% {
+        transform: translateY(0px)
+    }
+    25% {
+        transform: translateY(-7px)
+    }
+    50% {
+        transform: translateY(0px)
+    }
+    75% {
+        transform: translateY(7px)
+    }
+    100% {
+        transform: translateY(0px)
+    }
+}
+
+@keyframes topBottom {
+    0% {
+        transform: translateY(0px)
+    }
+    25% {
+        transform: translateY(7px)
+    }
+    50% {
+        transform: translateY(0px)
+    }
+    75% {
+        transform: translateY(-7px)
+    }
+    100% {
+        transform: translateY(0px)
+    }
+}
+
+.loader-13>div:nth-of-type(2) {
+    right: 0;
+    left: initial;
+}
+
+.loader-13:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    top: calc(50% - 5px);
+    animation: leftRight 0.6s infinite forwards linear;
+}
+
+@keyframes leftRight {
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(40px) ;
+    }
+    100% {
+        transform: translateX(0px)
+    }
+}
 
 @keyframes loader12 {
     0% {
         border-radius: 10%;
         transform: rotate(0deg)
+    }
+    75% {
+        border-radius: 50%;
+        transform: rotate(360deg)
     }
     100% {
         border-radius: 50%;
