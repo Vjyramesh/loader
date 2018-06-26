@@ -413,7 +413,35 @@ body {
     top: calc(50% - 5px);
     animation: leftRight 0.6s infinite forwards linear;
 }
-
+.loader-14 {
+    width: 75px;
+    height: 75px;
+    position: relative;
+    animation: rotate360 1s infinite forwards linear;
+}
+.loader-14 > div {
+    /* position: absolute; */
+    width: 35px;
+    height: 35px;
+    background: red;
+    border-radius: 50%;
+    animation: scale14 2s infinite;
+    top: 0;
+}
+.loader-14 > div:nth-of-type(2) {
+    animation-delay: -1.0s;
+}
+@keyframes scale14 {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
 @keyframes leftRight {
     0% {
         transform: translateX(0px);
