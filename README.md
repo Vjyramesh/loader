@@ -1,3 +1,3 @@
 # loader
 HTML loader 
-<a href="https://vjyramesh.github.io/loader">Demo here</a>
+<a traget="_blank" href="https://vjyramesh.github.io/loader">Demo here</a>
