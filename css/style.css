@@ -713,3 +713,58 @@ body {
         top: 36px;
     }
 }
+
+.loader-17 {
+	width: 50px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: relative;
+}
+
+.loader-17 > div:nth-child(1) {
+    position: absolute;
+    width: 2px;
+    height: calc(50% - 5px);
+    background: #fff;
+    left: 50%;
+    top: 5px;
+    animation: rotate360 3s linear forwards infinite;
+    transform-origin: center bottom;
+    
+            border-radius: 10px;
+
+}
+
+.loader-17 > div:nth-child(2) {
+    position: absolute;
+    width: 2px;
+    height: calc(50%);
+    background: #fff;
+    left: 50%;
+    top: 0px;
+    animation: rotate360 1s linear forwards infinite;
+    transform-origin: center bottom;
+    border-radius: 10px;
+}
+
+.loader-17:after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    left: calc(50% - 2px);
+    top: calc(50% - 2px);
+    border-radius: 50%
+}
+
+.loader-18 {
+    position: relative;
+    width: 50px;
+    
+    height: 50px;
+}
+.loader-18 div{
+	
+}
